@@ -1,0 +1,117 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>
+			Register
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<form #form="ngForm"
+		(ngSubmit)="signup()">
+		<ion-grid>
+			<ion-row color="primary"
+				justify-content-center>
+				<ion-col align-self-center
+					size-md="6"
+					size-lg="5"
+					size-xs="12">
+					<div text-center>
+						<h3>Create your account!</h3>
+					</div>
+					<div padding>
+						<ion-item>
+							<ion-input name="firstname"
+								type="text"
+								placeholder="Firstname"
+								required
+								[(ngModel)]="userData.firstname"></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-input name="lastname"
+								type="text"
+								placeholder="Lastname"
+								required
+								[(ngModel)]="userData.lastname"></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-input name="email"
+								type="email"
+								placeholder="your@email.com"
+								required
+								[(ngModel)]="userData.email"></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-input name="password"
+								type="password"
+								placeholder="Password"
+								required
+								[(ngModel)]="userData.password"></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-input name="confirm_passowrd"
+								type="password"
+								placeholder="Confirm Password"
+								required
+								[(ngModel)]="userData.confirm_passowrd">
+							</ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-input name="city"
+								type="text"
+								placeholder="City"
+								required
+								[(ngModel)]="userData.city"></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-input name="state"
+								type="text"
+								placeholder="State"
+								required
+								[(ngModel)]="userData.state"></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-input name="zip"
+								type="text"
+								placeholder="ZIP"
+								required
+								[(ngModel)]="userData.zip"></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-input name="country"
+								type="text"
+								placeholder="Country"
+								required
+								[(ngModel)]="userData.country"></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-input name="phone"
+								type="number"
+								placeholder="Phone"
+								required
+								[(ngModel)]="userData.phone"></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-select placeholder="Select One"
+								name="whoami"
+								[(ngModel)]="userData.whoami">
+								<ion-select-option value="1">I am a Buyer
+								</ion-select-option>
+								<ion-select-option value="2">I am a Seller
+								</ion-select-option>
+							</ion-select>
+						</ion-item>
+
+					</div>
+					<div padding>
+						<ion-button size="large"
+							type="submit"
+							[disabled]="form.invalid"
+							expand="block"
+							color="primary">Register</ion-button>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</form>
+</ion-content>

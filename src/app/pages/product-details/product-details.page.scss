@@ -1,0 +1,30 @@
+.welcome-card {
+  text-align: center;
+  img {
+    padding: 0px;
+    width: 100%;
+    // height: 35vh;
+    // max-height: 35vh;
+  }
+}
+.product-price{
+  padding: 10px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.product-single{
+  ion-card-title{
+  font-size: medium;
+}
+}
+.button-right{
+  align-self: flex-end;
+}
+
+.button-left{
+  align-self: flex-start;
+}
+.description{
+  text-align: justify;
+}

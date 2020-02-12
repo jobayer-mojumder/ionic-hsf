@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Cart
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid padding>
+    <ion-item *ngFor="let product of products"
+      routerLink="/product-details/{{ product.id }}">
+      <ion-thumbnail slot="start">
+        <img src="{{ product.image }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{ product.name }}</h3>
+        <p>
+          <span class="left">{{ product.category }}</span><span
+            class="right">&euro;{{ product.cost }}</span>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-grid>
+
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col size="3"
+        offset="1">
+        <ion-button (click)="clearCart()"
+          color="primary"
+          *ngIf="products">Clear Cart</ion-button>
+      </ion-col>
+
+      <ion-col size="3"
+        offset="2"
+        *ngIf="products">
+        <ion-button color="primary">Confirm Order</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <ion-fab vertical="bottom"
+    horizontal="start"
+    slot="fixed">
+    <ion-button (click)="clearCart()"
+      color="primary"
+      *ngIf="products">
+      Clear
+    </ion-button>
+  </ion-fab>
+
+  <!-- <ion-fab vertical="bottom"
+    horizontal="end"
+    slot="fixed">
+    <ion-button color="primary"
+      *ngIf="products">
+      confirm
+    </ion-button>
+  </ion-fab> -->
+
+</ion-content>

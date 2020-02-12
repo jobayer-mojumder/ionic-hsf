@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <img
+      src="https://www.wissweit.de/typo3temp/assets/images/_c__Hochschule_Fulda___Uli_Mayer_csm_1900x720_Fulda_7fa30aa626_8e129df691.jpg"
+      alt="" />
+    <ion-card-header>
+      <ion-card-title>Welcome to HSF-Marketplace</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid>
+    <ion-title class="home-title">New Products</ion-title>
+    <ion-row>
+      <ion-col *ngFor="let product of newProducts"
+        size="6">
+        <ion-card class="product-list"
+          routerLink="/product-details/{{ product.id }}">
+          <img class="product-image"
+            src="{{ product.image }}" />
+          <ion-card-header>
+            <ion-card-title>{{ product.name }}</ion-card-title>
+            <ion-card-subtitle>Price: &euro;{{ product.cost }}
+            </ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-title class="home-title">Top Products</ion-title>
+    <ion-row>
+      <ion-col *ngFor="let product of topProducts"
+        size="6">
+        <ion-card class="product-list"
+          routerLink="/product-details/{{ product.id }}">
+          <img class="product-image"
+            src="{{ product.image }}" />
+          <ion-card-header>
+            <ion-card-title>{{ product.name }}</ion-card-title>
+            <ion-card-subtitle>Price: &euro;{{ product.cost }}
+            </ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

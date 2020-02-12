@@ -1,0 +1,7 @@
+{
+  "name": "hsf-marketplace",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
